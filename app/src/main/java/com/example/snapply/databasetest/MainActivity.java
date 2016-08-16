@@ -80,20 +80,20 @@ public class MainActivity extends Activity {
                         String author = cursor.getString(cursor.getColumnIndex("author"));
                         int pages = cursor.getInt(cursor.getColumnIndex("pages"));
                         double price = cursor.getDouble(cursor.getColumnIndex("price"));
-                        AlertDialog.Builder aleart = new AlertDialog.Builder(MainActivity.this);
-                        aleart.setTitle("Information");
-                        aleart.setMessage("Name: " + name + ";\n" +
+                        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+                        alert.setTitle("Information");
+                        alert.setMessage("Name: " + name + ";\n" +
                                 "Author: " + author + ";\n" +
                                 "Pages: " + pages + ";\n" +
                                 "Price: " + price + ".");
-                        aleart.setCancelable(false);
-                        aleart.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        alert.setCancelable(false);
+                        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
                             }
                         });
-                        aleart.show();
+                        alert.show();
                     } while (cursor.moveToNext());
                 }
             }
