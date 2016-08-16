@@ -3,6 +3,7 @@ package com.example.snapply.databasetest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -86,7 +87,12 @@ public class MainActivity extends Activity {
                                 "Pages: " + pages + ";\n" +
                                 "Price: " + price + ".");
                         aleart.setCancelable(false);
-                        aleart.setPositiveButton("OK",null);
+                        aleart.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        });
                         aleart.show();
                     } while (cursor.moveToNext());
                 }
