@@ -107,7 +107,7 @@ public class MainActivity extends Activity {
                 try {
                     db.delete("Book",null,null);
                     if (true) {
-                        throw new NullPointerException();
+                        //throw new NullPointerException();
                     }
                     ContentValues values = new ContentValues();
                     values.put("name","Game of Stone");
